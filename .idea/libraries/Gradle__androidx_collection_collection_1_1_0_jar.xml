@@ -1,11 +1,19 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.collection:collection:1.1.0@jar">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/bae67b0019fbb38498198fcc2d0282a340b71c5b/collection-1.1.0-sources.jar!/" />
+=======
+      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/bae67b0019fbb38498198fcc2d0282a340b71c5b/collection-1.1.0-sources.jar!/" />
+>>>>>>> b72b817d7351cd98f1434a18467ca0fe39af9f4b
     </SOURCES>
   </library>
 </component>

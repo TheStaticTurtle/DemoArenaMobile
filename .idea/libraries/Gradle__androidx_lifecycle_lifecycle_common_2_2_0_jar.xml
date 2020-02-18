@@ -1,11 +1,19 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-common:2.2.0@jar">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/4ef09a745007778eef83b92f8f23987a8ea59496/lifecycle-common-2.2.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/d38861c5e1656c5eb1890b1fa149510f38aa5d42/lifecycle-common-2.2.0-sources.jar!/" />
+=======
+      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/4ef09a745007778eef83b92f8f23987a8ea59496/lifecycle-common-2.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/d38861c5e1656c5eb1890b1fa149510f38aa5d42/lifecycle-common-2.2.0-sources.jar!/" />
+>>>>>>> b72b817d7351cd98f1434a18467ca0fe39af9f4b
     </SOURCES>
   </library>
 </component>
