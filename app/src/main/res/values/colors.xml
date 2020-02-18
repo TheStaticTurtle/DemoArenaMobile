@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4fc2e9</color>
+    <color name="colorPrimaryDark">#15addf</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="defaultTextColor">#808080</color>
+    <color name="black">#000000</color>
+    <color name="bgColorUE">#33ff2900</color>
+    <color name="bgColorCourse">#22ffd100</color>
+    <color name="bgColorGrade">#1147ff00</color>
+    <color name="bgColorMOY">#331baaf5</color>
+    <color name="bgColorMOYGENE">#551baaf5</color>
+    <color name="justifiedAbsenceTextColor">#00FF00</color>
+    <color name="unjustifiedAbscenceTextColor">#FF0000</color>
+</resources>

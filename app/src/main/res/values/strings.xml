@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_versionname">1.0.0</string>
+    <string name="app_name">DemoArena</string>
+    <string name="login_please_connect">Veuillez vous connecter!</string>
+    <string name="login_user">Utilisateur:</string>
+    <string name="login_ine">Numero INE:</string>
+    <string name="login_password">Mot de passe:</string>
+    <string name="login_connect">Se connecter</string>
+    <string name="login_savepwd">Enregistrer le mot de passe</string>
+    <string name="stage2_captcha">Veuillez completer le captcha.</string>
+    <string name="stage2_error">Erreur a l\'étape 2:</string>
+    <string name="stage2_invalidCaptcha">Captcha invalide.</string>
+    <string name="stage1_incorrect">Mot de passe ou Utilisateur incorrect</string>
+    <string name="stage2_faliedine">Numero INE incorrect.</string>
+    <string name="viewer_grades">Notes</string>
+    <string name="viewer_absences">Absences</string>
+    <string name="viewer_absences_from">De:</string>
+    <string name="viewer_absences_to">A:</string>
+    <string name="viewer_absences_cause">Raison:</string>
+    <string name="viewer_absences_cause_unknown">Inconnue</string>
+    <string name="viewer_grades_moygene">Moyenne generale</string>
+    <string name="viewer_grades_grade">Note:</string>
+    <string name="viewer_grades_min">Min</string>
+    <string name="viewer_grades_max">Max</string>
+    <string name="viewer_grades_coeff">Coeff</string>
+</resources>
