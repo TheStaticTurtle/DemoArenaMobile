@@ -20,6 +20,7 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.google.android.material.tabs.TabLayout;
+import com.jcraft.jsch.JSchException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("Config", 0); // 0 - for private mode
         checkView.setChecked(pref.getBoolean("savePasswd",true));
         userView.setText(pref.getString("username", ""));
-        passView.setText(pref.getString("password", "5"));
+        passView.setText(pref.getString("password", ""));
         ineView.setText(pref.getString("ine", ""));
     }
 
@@ -150,6 +151,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(final Exception error) {
+                if(error.getClass().isInstance(JSchException.class)) {
+                    if(!manager.isInit()) {
+                        manager.init();
+                    }
+                }
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
