@@ -3,6 +3,7 @@ package com.turtleforgaming.demoarena;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.opengl.Visibility;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -25,10 +26,12 @@ public class GradeAdapter extends ArrayAdapter<DemoArenaUtils.Grade> {
 
     private class GradeViewHolder{
         private TextView TVgradeID;
+        private TextView TVgradeIDsep;
         private TextView TVgradeName;
         private TextView TVgrade;
         private TextView TVgradeStats;
         private TextView TVgradeStatsTitle;
+
         private ConstraintLayout layout;
     }
 
@@ -51,6 +54,7 @@ public class GradeAdapter extends ArrayAdapter<DemoArenaUtils.Grade> {
         if(viewHolder == null){
             viewHolder = new GradeViewHolder();
             viewHolder.TVgradeID = (TextView) convertView.findViewById(R.id.TVgradeID);
+            viewHolder.TVgradeIDsep = (TextView) convertView.findViewById(R.id.TVgradeIDsep);
             viewHolder.TVgradeName = (TextView) convertView.findViewById(R.id.TVgradeName);
             viewHolder.TVgrade = (TextView) convertView.findViewById(R.id.TVgrade);
             viewHolder.TVgradeStats = (TextView) convertView.findViewById(R.id.TVgradeStats);
@@ -63,23 +67,23 @@ public class GradeAdapter extends ArrayAdapter<DemoArenaUtils.Grade> {
 
 
         if(grade.type.contains( "GRADE"))  {
-            viewHolder.layout.setPadding(topx(24),topx(10), topx(8),topx(10));
+            viewHolder.layout.setPadding(topx(30),topx(10), topx(16),topx(10));
             viewHolder.layout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bgColorGrade));
         }
         if(grade.type.contains("COURSE")) {
-            viewHolder.layout.setPadding(topx(16),topx(10), topx(8),topx(10));
+            viewHolder.layout.setPadding(topx(20),topx(10), topx(16),topx(10));
             viewHolder.layout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bgColorCourse));
         }
         if(grade.type.contains("UE"))     {
-            viewHolder.layout.setPadding(topx(8),topx(10), topx(8),topx(10));
+            viewHolder.layout.setPadding(topx(10),topx(10), topx(16),topx(10));
             viewHolder.layout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bgColorUE));
         }
         if(grade.type.contains("MOY") || grade.type.contains("BONUS"))     {
-            viewHolder.layout.setPadding(topx(16),topx(10), topx(8),topx(10));
+            viewHolder.layout.setPadding(topx(20),topx(10), topx(16),topx(10));
             viewHolder.layout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bgColorMOY));
         }
         if(grade.type.contains("MOYGEN"))     {
-            viewHolder.layout.setPadding(topx(8),topx(10), topx(8),topx(10));
+            viewHolder.layout.setPadding(topx(10),topx(10), topx(16),topx(10));
             viewHolder.layout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bgColorMOYGENE));
         }
 
@@ -101,6 +105,13 @@ public class GradeAdapter extends ArrayAdapter<DemoArenaUtils.Grade> {
         if(grade.coeff >=0) { statText += String.valueOf(grade.coeff); statTitle += "Coeff"; }
         viewHolder.TVgrade.setText(gradeText);
 
+        if(grade.showId) {
+            viewHolder.TVgradeID.setVisibility(View.VISIBLE);
+            viewHolder.TVgradeIDsep.setVisibility(View.VISIBLE);
+        } else {
+            viewHolder.TVgradeID.setVisibility(View.GONE);
+            viewHolder.TVgradeIDsep.setVisibility(View.GONE);
+        }
 
         viewHolder.TVgradeStats.setText(statText);
         viewHolder.TVgradeStatsTitle.setText(statTitle);

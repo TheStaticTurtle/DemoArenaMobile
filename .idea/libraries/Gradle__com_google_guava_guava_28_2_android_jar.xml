@@ -1,7 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.guava:guava:28.2-android@jar">
     <CLASSES>
-<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/28.2-android/e11db6e27f5d1ec19826848a865c496c798398fa/guava-28.2-android.jar!/" />
     </CLASSES>
     <JAVADOC>
@@ -9,15 +8,6 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/28.2-android/e20d0252d48adea65a96e44d8d4bfb1febb6e7b/guava-28.2-android-sources.jar!/" />
-=======
-      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/com.google.guava/guava/28.2-android/e11db6e27f5d1ec19826848a865c496c798398fa/guava-28.2-android.jar!/" />
-    </CLASSES>
-    <JAVADOC>
-      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/com.google.guava/guava/28.2-android/d826a80d6169868df307ebe63cfd9caa018be04f/guava-28.2-android-javadoc.jar!/" />
-    </JAVADOC>
-    <SOURCES>
-      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/com.google.guava/guava/28.2-android/e20d0252d48adea65a96e44d8d4bfb1febb6e7b/guava-28.2-android-sources.jar!/" />
->>>>>>> b72b817d7351cd98f1434a18467ca0fe39af9f4b
     </SOURCES>
   </library>
 </component>

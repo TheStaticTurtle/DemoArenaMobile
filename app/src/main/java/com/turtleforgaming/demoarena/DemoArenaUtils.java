@@ -320,6 +320,7 @@ class DemoArenaUtils {
                     moy.min_grade = -1;
                     moy.outof = -1;
                     moy.type = "BONUS";
+                    moy.showId = false;
                     user.semesters.get(0).uesMoy.add(moy);
 
                 } else {
@@ -339,6 +340,7 @@ class DemoArenaUtils {
                     moy.max_grade = -1;
                     moy.min_grade = -1;
                     moy.type = "MOY";
+                    moy.showId = false;
                     user.semesters.get(0).uesMoy.add(moy);
                 }
             }
@@ -364,6 +366,7 @@ class DemoArenaUtils {
             g.min_grade = -1;
             g.grade =  Math.round( (totalNotes / totalCoeff)*100.0 ) /100.0;
             g.grade += noteOffset;
+            g.showId = false;
             user.semesters.get(0).moyGen = g;
         }
 
@@ -395,6 +398,7 @@ class DemoArenaUtils {
         double max_grade = 0;
         double coeff = 0;
         String type = "GRADE";
+        boolean showId = true;
     }
 
     class UE extends Grade {

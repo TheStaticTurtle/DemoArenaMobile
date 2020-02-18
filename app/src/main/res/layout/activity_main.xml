@@ -110,7 +110,9 @@
                 android:id="@+id/editTextCaptcha"
                 android:layout_width="148dp"
                 android:layout_height="wrap_content"
-                android:ems="10" />
+                android:ems="10"
+                android:maxLength="6"
+                android:maxLines="1"/>
 
             <ImageView
                 android:id="@+id/imageView"

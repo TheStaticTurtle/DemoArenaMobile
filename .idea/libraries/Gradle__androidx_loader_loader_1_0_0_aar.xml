@@ -1,21 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.loader:loader:1.0.0@aar">
     <CLASSES>
-<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5276819c062a92c029464122749254f1/loader-1.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5276819c062a92c029464122749254f1/loader-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.loader/loader/1.0.0/b9ef587f3e46c7fe5b00264989764e43ff45cada/loader-1.0.0-sources.jar!/" />
-=======
-      <root url="jar:///opt/localhome/stugler/gradle/caches/transforms-2/files-2.1/5276819c062a92c029464122749254f1/loader-1.0.0/jars/classes.jar!/" />
-      <root url="file:///opt/localhome/stugler/gradle/caches/transforms-2/files-2.1/5276819c062a92c029464122749254f1/loader-1.0.0/res" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/androidx.loader/loader/1.0.0/b9ef587f3e46c7fe5b00264989764e43ff45cada/loader-1.0.0-sources.jar!/" />
->>>>>>> b72b817d7351cd98f1434a18467ca0fe39af9f4b
     </SOURCES>
   </library>
 </component>

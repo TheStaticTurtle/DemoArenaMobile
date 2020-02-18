@@ -1,7 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.test:runner:1.1.1@aar">
     <CLASSES>
-<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/56217a4fd816b5f9591b1722cb612335/runner-1.1.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/56217a4fd816b5f9591b1722cb612335/runner-1.1.1/res" />
     </CLASSES>
@@ -10,16 +9,6 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/runner/1.1.1/e82336ffd82baab0914e82ca0ced012b0da5adeb/runner-1.1.1-sources.jar!/" />
-=======
-      <root url="jar:///opt/localhome/stugler/gradle/caches/transforms-2/files-2.1/56217a4fd816b5f9591b1722cb612335/runner-1.1.1/jars/classes.jar!/" />
-      <root url="file:///opt/localhome/stugler/gradle/caches/transforms-2/files-2.1/56217a4fd816b5f9591b1722cb612335/runner-1.1.1/res" />
-    </CLASSES>
-    <JAVADOC>
-      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/androidx.test/runner/1.1.1/8b4ecee1d9f285a07c3a52619268bc2e0723ea0/runner-1.1.1-javadoc.jar!/" />
-    </JAVADOC>
-    <SOURCES>
-      <root url="jar:///opt/localhome/stugler/gradle/caches/modules-2/files-2.1/androidx.test/runner/1.1.1/e82336ffd82baab0914e82ca0ced012b0da5adeb/runner-1.1.1-sources.jar!/" />
->>>>>>> b72b817d7351cd98f1434a18467ca0fe39af9f4b
     </SOURCES>
   </library>
 </component>

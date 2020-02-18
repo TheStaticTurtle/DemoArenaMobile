@@ -59,7 +59,8 @@
             android:id="@+id/tabItemMisses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/viewer_absences" />
+            android:text="@string/viewer_absences"
+            android:visibility="visible" />
 
     </com.google.android.material.tabs.TabLayout>
 
