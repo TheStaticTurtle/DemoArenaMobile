@@ -7,10 +7,13 @@
     <string name="login_password">Mot de passe:</string>
     <string name="login_connect">Se connecter</string>
     <string name="login_savepwd">Enregistrer le mot de passe</string>
+    <string name="login_gateinfo_error">Erreur de connection a gate-info:\n %1$s</string>
+    <string name="login_gateinfo_connected">Application connectée a gateinfo</string>
     <string name="stage2_captcha">Veuillez completer le captcha.</string>
-    <string name="stage2_error">Erreur a l\'étape 2:</string>
+    <string name="stage2_error">Erreur a l\'étape 2:\n %1$s</string>
     <string name="stage2_invalidCaptcha">Captcha invalide.</string>
     <string name="stage1_incorrect">Mot de passe ou Utilisateur incorrect</string>
+    <string name="stage1_error">Erreur a l\'étape 1:\n %1$s</string>
     <string name="stage2_faliedine">Numero INE incorrect.</string>
     <string name="viewer_grades">Notes</string>
     <string name="viewer_absences">Absences</string>
@@ -23,4 +26,10 @@
     <string name="viewer_grades_min">Min</string>
     <string name="viewer_grades_max">Max</string>
     <string name="viewer_grades_coeff">Coeff</string>
+    <string name="pretty_errors_connection_reset">Connection impossible. (%1$s)</string>
+    <string name="pretty_errors_soft_abort">Erreur logiciel. (%1$s)</string>
+    <string name="pretty_errors_auth_fail">Erreur d\'authentification (Mot de passe ou utilisateur incorrect)</string>
+    <string name="pretty_errors_unknown">Erreur inconnue: %1$s</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_error">Erreur!</string>
 </resources>

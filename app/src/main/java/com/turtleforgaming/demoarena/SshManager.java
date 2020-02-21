@@ -19,6 +19,11 @@ interface SshResultCallback {
     void onFailure(Exception error);
 }
 
+interface SshConnectionResult {
+    void onSuccess();
+    void onFailure(Exception error);
+}
+
 class SshCommand {
     String command ="";
     SshResultCallback callback;
@@ -89,8 +94,12 @@ class SshManager {
         this.pass = pass;
     }
 
+    protected void setCredentials(String user, String pass) {
+        this.user = user;
+        this.pass = pass;
+    }
     @SuppressWarnings("all")
-    protected void init() {
+    protected void init(final SshConnectionResult cb) {
         try {
             JSch jsch = new JSch();
             this.session = jsch.getSession(this.user, this.host.hostname, this.host.port);
@@ -104,14 +113,17 @@ class SshManager {
                 protected Void doInBackground(Void... params) {
                     try {
                         session.connect();
+                        cb.onSuccess();
                     } catch (Exception e) {
                         Log.e("SshManager","Failed to initialize SshSession: "+e.toString());
+                        cb.onFailure(e);
                     }
                     return null;
                 }
             }.execute();
         } catch (JSchException e) {
             Log.e("SshManager","Failed to initialize SshSession: "+e.toString());
+            cb.onFailure(e);
         }
     }
 

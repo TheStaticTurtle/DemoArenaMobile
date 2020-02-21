@@ -1,13 +1,18 @@
 package com.turtleforgaming.demoarena;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -79,19 +84,10 @@ public class MainActivity extends AppCompatActivity {
         buttonConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                connect();
+                connectGateInfo();
             }
         });
         buttonCaptcha = findViewById(R.id.buttonValidateCacha);
-
-        /*Button buttonDisonnect = findViewById(R.id.button2);
-        buttonDisonnect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //disconnect();
-                Log.wtf("TAG", "DECO");
-            }
-        });*/
 
         InputFilter enterFilter = new InputFilter() {
             public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
@@ -110,6 +106,42 @@ public class MainActivity extends AppCompatActivity {
         loadPreferences();
         manager = new SshManager(new Networkdddress("gate-info.iut-bm.univ-fcomte.fr",22),userView.getText().toString(),passView.getText().toString());
         demoArenaUtils = new DemoArenaUtils(manager);
+    }
+
+    private String prettifyErrors(Exception e) {
+        String et = e.toString();
+        String text = et.split(":")[et.split(":").length-1];
+
+        if(et.contains("Connection reset")) {
+            return getString(R.string.pretty_errors_connection_reset,text);
+        } else if (et.contains("Software caused connection abort")) {
+            return getString(R.string.pretty_errors_soft_abort,text);
+        } else if (et.contains("Auth fail")) {
+            return getString(R.string.pretty_errors_auth_fail);
+        } else if (et.contains(getString(R.string.stage2_invalidCaptcha))) {
+            return getString(R.string.stage2_invalidCaptcha);
+        }
+        return getString(R.string.pretty_errors_unknown, e);
+    }
+
+
+
+
+    protected void popup(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme));
+
+        builder.setMessage(message)
+                .setTitle(title)
+                .setIcon(R.mipmap.ic_launcher)
+                .setPositiveButton(getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     private void updatePreference(int saveMode) {
@@ -140,11 +172,49 @@ public class MainActivity extends AppCompatActivity {
         ineView.setText(pref.getString("ine", ""));
     }
 
-    private void connect() {
+    private void connectGateInfo() {
         updatePreference(1);
         buttonConnect.setEnabled(false);
-        buttonCaptcha.setEnabled(true);
         gifImageView.setGifImageResource(R.drawable.info_iut);
+
+        if(!manager.isInit()) {
+            manager.setCredentials(userView.getText().toString(),passView.getText().toString());
+            manager.init(new SshConnectionResult() {
+                @Override
+                public void onSuccess() {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            tvStatus.setText(getResources().getString(R.string.login_gateinfo_connected));
+                            connect();
+                        }
+                    });
+                }
+
+                @Override
+                public void onFailure(final Exception error) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            buttonConnect.setEnabled(true);
+                            buttonCaptcha.setEnabled(true);
+                            tvStatus.setText(getResources().getString(R.string.login_gateinfo_error, prettifyErrors(error)));
+                            gifImageView.setGifImageResource(R.drawable.info_iut_still);
+                            popup(getString(R.string.dialog_error),prettifyErrors(error));
+                        }
+                    });
+
+                }
+            });
+        } else {
+            connect();
+        }
+    }
+    private void connect() {
+
+        final ImageView cp = findViewById(R.id.imageView);
+        cp.setImageDrawable(getDrawable(R.drawable.loading));
+
         demoArenaUtils.stage1(userView.getText().toString(),passView.getText().toString(),new DemoarenaStage1Callback() {
             @Override
             public void onSuccess(Bitmap captcha) {
@@ -152,9 +222,10 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         gifImageView.setGifImageResource(R.drawable.info_iut_still);
-                        ImageView cp = findViewById(R.id.imageView);
 
                         cp.setImageBitmap(demoArenaUtils.latestCaptcha);
+                        buttonCaptcha.setEnabled(true);
+
                         findViewById(R.id.tableRowCatcha).setVisibility(View.VISIBLE);
                         findViewById(R.id.tableRowCatchaBtn).setVisibility(View.VISIBLE);
                         findViewById(R.id.tableRowConnect).setVisibility(View.GONE);
@@ -179,18 +250,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(final Exception error) {
-                if (error.getClass().isInstance(JSchException.class)) {
-                    if (!manager.isInit()) {
-                        manager.init();
-                    }
-                }
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         buttonConnect.setEnabled(true);
                         buttonCaptcha.setEnabled(true);
-                        tvStatus.setText("Erreur a l'etape 1:\n" + error.toString());
+                        tvStatus.setText(getResources().getString(R.string.stage1_error, prettifyErrors(error)));
                         gifImageView.setGifImageResource(R.drawable.info_iut_still);
+                        popup(getString(R.string.dialog_error),prettifyErrors(error));
                     }
                 });
             }
@@ -228,12 +295,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         connect();
-                        //findViewById(R.id.tableRowCatcha).setVisibility(View.GONE);
-                        //findViewById(R.id.tableRowCatchaBtn).setVisibility(View.GONE);
-                        //findViewById(R.id.tableRowConnect).setVisibility(View.VISIBLE);
-                        //buttonConnect.setEnabled(true);
-                        //buttonCaptcha.setEnabled(true);
-                        tvStatus.setText("Erreur a l'etape 2:" + error.getMessage());
+                        tvStatus.setText(getString(R.string.stage2_error,prettifyErrors(error)));
+                        popup(getString(R.string.dialog_error),prettifyErrors(error));
                         gifImageView.setGifImageResource(R.drawable.info_iut_still);
 
                     }
@@ -248,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textViewUserName = findViewById(R.id.textViewUserName);
         TextView textViewFormationName = findViewById(R.id.textViewFormationName);
         Spinner spinnerPeriods = findViewById(R.id.spinnerPeriods);
-        final ViewFlipper vf = (ViewFlipper)findViewById(R.id.layoutFlipper);
+        final ViewFlipper vf = findViewById(R.id.layoutFlipper);
 
 
         DemoArenaUtils.User user = demoArenaUtils.parseCurrentPage();
@@ -298,7 +361,8 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Exception error) {
-                        Toast.makeText(getApplicationContext(),"Erreur: "+error.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),prettifyErrors(error), Toast.LENGTH_LONG).show();
+                        popup(getString(R.string.dialog_error),prettifyErrors(error));
                     }
                 });
             }
@@ -351,17 +415,13 @@ public class MainActivity extends AppCompatActivity {
             grades.add(user.semesters.get(0).moyGen);
         }
 
-        for(DemoArenaUtils.Grade uemoy : user.semesters.get(0).uesMoy) {
-            grades.add(uemoy);
-        }
+        grades.addAll(user.semesters.get(0).uesMoy);
 
         for(DemoArenaUtils.UE ue : user.semesters.get(0).ues) {
             grades.add(ue);
             for(DemoArenaUtils.Course course : ue.courses) {
                 grades.add(course);
-                for(DemoArenaUtils.Grade grade: course.grades) {
-                    grades.add(grade);
-                }
+                grades.addAll(course.grades);
             }
         }
         GradeAdapter grdAdapter = new GradeAdapter(MainActivity.this, grades);

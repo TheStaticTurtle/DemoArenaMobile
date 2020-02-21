@@ -50,9 +50,9 @@ class DemoArenaUtils {
 
     DemoArenaUtils(SshManager manager) {
         this.manager = manager;
-        if(!this.manager.isInit()) {
+        /*if(!this.manager.isInit()) {
             this.manager.init();
-        }
+        }*/
     }
 
     private void setStage1Result(String result) {
