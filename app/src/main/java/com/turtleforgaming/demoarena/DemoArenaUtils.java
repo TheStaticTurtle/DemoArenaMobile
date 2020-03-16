@@ -320,7 +320,7 @@ class DemoArenaUtils {
                             grade.name = el.child(3).text();
 
                             String coeffText = el.child(6).text().replace("(","").replace(")","");
-                            if(coeffText.isEmpty()) { currentUE.coeff = -1; } else { currentUE.coeff = Double.parseDouble(coeffText); }
+                            if(coeffText.isEmpty()) { grade.coeff = -1; } else { grade.coeff = Double.parseDouble(coeffText); }
 
                             String gradeText =  el.child(4).text();
                             String[] gradesTexts = gradeText.split("/");

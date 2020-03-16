@@ -9,7 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a242a258-6b2f-4a82-b06c-1107d1b96bdf" name="Default Changelist" comment="Added user-comprenhsible errors&#10;Mofidifed app action with user interactions (Disabling / Enabling buttons at the right time)&#10;SshSession now connect when user press the button not at app startup&#10;Limited input filed for the correct values (INE + Captcha)&#10;Changed application theme&#10;Put all hardcoded text into strings.xml">
+    <list default="true" id="a242a258-6b2f-4a82-b06c-1107d1b96bdf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,9 +18,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/app-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/GradeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/GradeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,8 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="244" column="48" lean-forward="true" selection-start-line="244" selection-start-column="48" selection-end-line="244" selection-end-column="48" />
+            <state relative-caret-position="468">
+              <caret line="335" column="49" lean-forward="true" selection-start-line="335" selection-start-column="49" selection-end-line="335" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3416#3440#1" expanded="true" />
@@ -119,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/GradeAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+              <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,14 +229,16 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/SshManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/GradeAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1920" />
-    <option name="height" value="1044" />
+    <option name="x" value="694" />
+    <option name="y" value="-25" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -430,6 +431,14 @@
       <option name="presentableId" value="Default" />
       <updated>1581414030462</updated>
     </task>
+    <task id="LOCAL-00001" summary="Finnaly patched individuals grades&#10;Completed semesters no longer displays abcences (Since the server doesn't return it)">
+      <created>1584380236881</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584380236882</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -442,7 +451,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -454,13 +463,13 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" weight="0.32959402" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.32855567" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="1" visible="true" weight="0.19609967" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32827735" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.19609967" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32855567" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49946582" weight="0.32779622" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5005342" side_tool="true" weight="0.32779622" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49893162" weight="0.08775731" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3296582" />
       <window_info anchor="bottom" id="Android Profiler" order="9" />
@@ -509,7 +518,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added user-comprenhsible errors&#10;Mofidifed app action with user interactions (Disabling / Enabling buttons at the right time)&#10;SshSession now connect when user press the button not at app startup&#10;Limited input filed for the correct values (INE + Captcha)&#10;Changed application theme&#10;Put all hardcoded text into strings.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added user-comprenhsible errors&#10;Mofidifed app action with user interactions (Disabling / Enabling buttons at the right time)&#10;SshSession now connect when user press the button not at app startup&#10;Limited input filed for the correct values (INE + Captcha)&#10;Changed application theme&#10;Put all hardcoded text into strings.xml" />
+    <MESSAGE value="Finnaly patched individuals grades&#10;Completed semesters no longer displays abcences (Since the server doesn't return it)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finnaly patched individuals grades&#10;Completed semesters no longer displays abcences (Since the server doesn't return it)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/ConnectionInfo.java" />
@@ -656,13 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -719,17 +722,24 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/GradeAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+          <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="244" column="48" lean-forward="true" selection-start-line="244" selection-start-column="48" selection-end-line="244" selection-end-column="48" />
+        <state relative-caret-position="468">
+          <caret line="335" column="49" lean-forward="true" selection-start-line="335" selection-start-column="49" selection-end-line="335" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3416#3440#1" expanded="true" />
