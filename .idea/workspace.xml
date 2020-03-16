@@ -9,7 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a242a258-6b2f-4a82-b06c-1107d1b96bdf" name="Default Changelist" comment="">
+    <list default="true" id="a242a258-6b2f-4a82-b06c-1107d1b96bdf" name="Default Changelist" comment="Patched grade coeff (Was modifing the UE coeff)">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,8 +18,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/app-release.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,33 +76,58 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="61" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="180" column="65" selection-start-line="180" selection-start-column="65" selection-end-line="180" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1898#2093#0" expanded="true" />
-                <element signature="e#2092#2093#0" expanded="true" />
-                <element signature="e#12141#12174#0" expanded="true" />
-                <element signature="e#12252#12287#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="194" column="65" lean-forward="true" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2122#2317#0" expanded="true" />
+                <element signature="e#2316#2317#0" expanded="true" />
+                <element signature="e#4121#4152#0" expanded="true" />
+                <element signature="e#4186#4225#0" expanded="true" />
+                <element signature="e#4271#4442#0" expanded="true" />
+                <element signature="e#4441#4442#0" expanded="true" />
+                <element signature="e#4464#4706#0" expanded="true" />
+                <element signature="e#4705#4706#0" expanded="true" />
+                <element signature="method#openlink#0;class#MainActivity#0" />
+                <element signature="method#checkUpdate#0;class#MainActivity#0" />
+                <element signature="e#7188#9600#0" expanded="true" />
+                <element signature="e#7761#8503#0" expanded="true" />
+                <element signature="e#8502#8503#0" expanded="true" />
+                <element signature="e#8703#8739#0" expanded="true" />
+                <element signature="e#8785#8822#0" expanded="true" />
+                <element signature="e#8854#8894#0" expanded="true" />
+                <element signature="e#9114#9320#0" expanded="true" />
+                <element signature="e#9319#9320#0" expanded="true" />
+                <element signature="e#9599#9600#0" expanded="true" />
+                <element signature="method#isInternetAvailable#0;class#MainActivity#0" />
+                <element signature="e#10319#10608#0" expanded="true" />
+                <element signature="e#10460#10519#0" expanded="true" />
+                <element signature="e#10607#10608#0" expanded="true" />
+                <element signature="e#10753#11321#0" expanded="true" />
+                <element signature="e#11013#11091#0" expanded="true" />
+                <element signature="e#11217#11249#0" expanded="true" />
+                <element signature="e#11320#11321#0" expanded="true" />
+                <element signature="e#15819#15852#0" expanded="true" />
+                <element signature="e#15930#15965#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="335" column="49" lean-forward="true" selection-start-line="335" selection-start-column="49" selection-end-line="335" selection-end-column="49" />
+            <state relative-caret-position="876">
+              <caret line="327" column="86" selection-start-line="327" selection-start-column="86" selection-end-line="327" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3416#3440#1" expanded="true" />
@@ -151,8 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="578">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -226,11 +251,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/semester_adapter.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/grade_adapter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/SshManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/GradeAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -270,6 +296,17 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="demoarena" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="DemoArenaUtils.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="DemoArena" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="DemoArena" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -438,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584380236882</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Patched grade coeff (Was modifing the UE coeff)">
+      <created>1584382139759</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584382139759</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -451,7 +495,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -470,7 +514,7 @@
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49946582" weight="0.32779622" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5005342" side_tool="true" weight="0.32779622" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49893162" weight="0.08775731" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49893162" visible="true" weight="0.08775731" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3296582" />
       <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32890365" />
@@ -519,7 +563,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added user-comprenhsible errors&#10;Mofidifed app action with user interactions (Disabling / Enabling buttons at the right time)&#10;SshSession now connect when user press the button not at app startup&#10;Limited input filed for the correct values (INE + Captcha)&#10;Changed application theme&#10;Put all hardcoded text into strings.xml" />
     <MESSAGE value="Finnaly patched individuals grades&#10;Completed semesters no longer displays abcences (Since the server doesn't return it)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finnaly patched individuals grades&#10;Completed semesters no longer displays abcences (Since the server doesn't return it)" />
+    <MESSAGE value="Patched grade coeff (Was modifing the UE coeff)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Patched grade coeff (Was modifing the UE coeff)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/ConnectionInfo.java" />
@@ -673,42 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="61" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/grade_adapter.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="180" column="65" selection-start-line="180" selection-start-column="65" selection-end-line="180" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1898#2093#0" expanded="true" />
-            <element signature="e#2092#2093#0" expanded="true" />
-            <element signature="e#12141#12174#0" expanded="true" />
-            <element signature="e#12252#12287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/SshManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-377">
@@ -738,14 +747,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="335" column="49" lean-forward="true" selection-start-line="335" selection-start-column="49" selection-end-line="335" selection-end-column="49" />
+        <state relative-caret-position="876">
+          <caret line="327" column="86" selection-start-line="327" selection-start-column="86" selection-end-line="327" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3416#3440#1" expanded="true" />
             <element signature="e#4747#4771#1" expanded="true" />
             <element signature="e#5517#5541#1" expanded="true" />
             <element signature="e#9191#9215#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/grade_adapter.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="194" column="65" lean-forward="true" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2122#2317#0" expanded="true" />
+            <element signature="e#2316#2317#0" expanded="true" />
+            <element signature="e#4121#4152#0" expanded="true" />
+            <element signature="e#4186#4225#0" expanded="true" />
+            <element signature="e#4271#4442#0" expanded="true" />
+            <element signature="e#4441#4442#0" expanded="true" />
+            <element signature="e#4464#4706#0" expanded="true" />
+            <element signature="e#4705#4706#0" expanded="true" />
+            <element signature="method#openlink#0;class#MainActivity#0" />
+            <element signature="method#checkUpdate#0;class#MainActivity#0" />
+            <element signature="e#7188#9600#0" expanded="true" />
+            <element signature="e#7761#8503#0" expanded="true" />
+            <element signature="e#8502#8503#0" expanded="true" />
+            <element signature="e#8703#8739#0" expanded="true" />
+            <element signature="e#8785#8822#0" expanded="true" />
+            <element signature="e#8854#8894#0" expanded="true" />
+            <element signature="e#9114#9320#0" expanded="true" />
+            <element signature="e#9319#9320#0" expanded="true" />
+            <element signature="e#9599#9600#0" expanded="true" />
+            <element signature="method#isInternetAvailable#0;class#MainActivity#0" />
+            <element signature="e#10319#10608#0" expanded="true" />
+            <element signature="e#10460#10519#0" expanded="true" />
+            <element signature="e#10607#10608#0" expanded="true" />
+            <element signature="e#10753#11321#0" expanded="true" />
+            <element signature="e#11013#11091#0" expanded="true" />
+            <element signature="e#11217#11249#0" expanded="true" />
+            <element signature="e#11320#11321#0" expanded="true" />
+            <element signature="e#15819#15852#0" expanded="true" />
+            <element signature="e#15930#15965#0" expanded="true" />
           </folding>
         </state>
       </provider>

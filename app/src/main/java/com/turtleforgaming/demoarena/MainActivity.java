@@ -5,9 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
 import android.graphics.Bitmap;
+import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.Spanned;
@@ -29,6 +34,9 @@ import android.widget.ViewFlipper;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.jcraft.jsch.JSchException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -106,6 +114,24 @@ public class MainActivity extends AppCompatActivity {
         loadPreferences();
         manager = new SshManager(new Networkdddress("gate-info.iut-bm.univ-fcomte.fr",22),userView.getText().toString(),passView.getText().toString());
         demoArenaUtils = new DemoArenaUtils(manager);
+
+        if (!isInternetAvailable()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme));
+            builder.setTitle(getString(R.string.no_internet))
+                    .setMessage(getString(R.string.no_internet_message))
+                    .setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                        @Override  public void onClick(DialogInterface dialogInterface, int i) {  finish(); }
+                    })
+                    .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                        @Override
+                        public void onDismiss(DialogInterface dialogInterface) {
+                            finish();
+                        }
+                    })
+                    .show();
+        } else {
+            checkUpdate();
+        }
     }
 
     private String prettifyErrors(Exception e) {
@@ -172,6 +198,62 @@ public class MainActivity extends AppCompatActivity {
         ineView.setText(pref.getString("ine", ""));
     }
 
+    public void openlink(String url) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent);
+    }
+    public void checkUpdate() {
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    PackageInfo pInfo = getApplicationContext().getPackageManager().getPackageInfo(getPackageName(), 0);
+                    String version = pInfo.versionName;
+
+                    Document doc = Jsoup.connect("https://raw.githubusercontent.com/TurtleForGaming/DemoArenaMobile/master/VERSION.txt").get();
+                    final String gitVersion = doc.text();
+
+                    if(!version.equals(gitVersion)) {
+                        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                switch (which){
+                                    case DialogInterface.BUTTON_POSITIVE:
+                                        openlink("https://github.com/TurtleForGaming/DemoArenaMobile/releases/download/V"+gitVersion+"/app-release.apk");
+                                        break;
+
+                                    case DialogInterface.BUTTON_NEGATIVE:
+                                        //No button clicked
+                                        break;
+                                }
+                            }
+                        };
+
+                        final AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.AppTheme));
+                        builder.setTitle(getString(R.string.action_newupdate))
+                                .setMessage(getString(R.string.action_newversion) + ": \n" + gitVersion + "\n\n"+getString(R.string.action_actualversion)+":\n"+version)
+                                .setPositiveButton("Download", dialogClickListener)
+                                .setNegativeButton("Pass", dialogClickListener);
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                builder.show();
+                            }
+                        });
+                    }
+
+                } catch (Exception e) {
+                    Log.e("checkUpdate", e.getMessage(), e);
+                    Toast.makeText(getApplicationContext(),"Failed to check update", Toast.LENGTH_LONG).show();
+                }
+            }
+        }).start();
+    }
+    public boolean isInternetAvailable() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected();
+    }
+
     private void connectGateInfo() {
         updatePreference(1);
         buttonConnect.setEnabled(false);
@@ -203,7 +285,6 @@ public class MainActivity extends AppCompatActivity {
                             popup(getString(R.string.dialog_error),prettifyErrors(error));
                         }
                     });
-
                 }
             });
         } else {

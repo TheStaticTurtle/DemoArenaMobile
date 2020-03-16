@@ -32,4 +32,11 @@
     <string name="pretty_errors_unknown">Erreur inconnue: %1$s</string>
     <string name="dialog_ok">Ok</string>
     <string name="dialog_error">Erreur!</string>
+
+    <string name="no_internet">Pas de connexion Internet</string>
+    <string name="no_internet_message">Il semblerait que vous n\'êtes pas connecté à Internet. Veuillez vous assurer que vous êtes en ligne et réessayez.</string>
+
+    <string name="action_newversion">Nouvelle version</string>
+    <string name="action_actualversion">Version actuelle</string>
+    <string name="action_newupdate">Mise à jour disponible</string>
 </resources>
