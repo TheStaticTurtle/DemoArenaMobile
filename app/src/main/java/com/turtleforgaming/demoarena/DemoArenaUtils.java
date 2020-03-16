@@ -288,7 +288,6 @@ class DemoArenaUtils {
                             }
 
                             currentUE.courses.add(currentCourse);
-
                         }
                     } else {
                         if (el.hasClass("notes_bulletin_row_ue")) {
@@ -303,29 +302,37 @@ class DemoArenaUtils {
                             } else {
                                 currentUE.name = el.text();
                             }
-                            currentUE.grade = Double.parseDouble(el.child(2).text());
-                            currentUE.coeff = Double.parseDouble(el.child(4).text());
 
-                            Pattern pattern2 = Pattern.compile("(\\d+.\\d+)/(\\d+.\\d+)");
-                            Matcher matcher2 = pattern2.matcher(el.html());
-                            if (matcher2.find()) {
-                                currentUE.min_grade = Double.parseDouble(matcher2.group(1));
-                                currentUE.max_grade = Double.parseDouble(matcher2.group(2));
-                            }
+                            String gradeText = el.child(2).text();
+                            String coeffText = el.child(4).text();
+                            if(gradeText.isEmpty()) { currentUE.grade = -1; } else { currentUE.grade = Double.parseDouble(gradeText); }
+                            if(coeffText.isEmpty()) { currentUE.coeff = -1; } else { currentUE.coeff = Double.parseDouble(coeffText); }
+
+                            currentUE.min_grade = -1;
+                            currentUE.max_grade = -1;
 
                             user.semesters.get(0).ues.add(currentUE);
 
 
                         } else if(el.hasClass("toggle4")) {
                             Grade grade = new Grade();
-                            grade.coeff = 0;
-                            grade.grade = 0;
-                            grade.id = "UNKNOWN";
-                            grade.max_grade = 0;
-                            grade.min_grade = 0;
-                            grade.name = "UNKNOWN";
-                            grade.outof = 0;
-                            grade.showId = true;
+
+                            grade.name = el.child(3).text();
+
+                            String coeffText = el.child(6).text().replace("(","").replace(")","");
+                            if(coeffText.isEmpty()) { currentUE.coeff = -1; } else { currentUE.coeff = Double.parseDouble(coeffText); }
+
+                            String gradeText =  el.child(4).text();
+                            String[] gradesTexts = gradeText.split("/");
+
+                            try { grade.grade = Double.parseDouble(gradesTexts[0]); } catch (Exception e) {  grade.grade = -1; }
+                            try {  grade.outof = Double.parseDouble(gradesTexts[1]);  } catch (Exception e) { grade.outof = -1; }
+
+                            grade.max_grade = -1;
+                            grade.min_grade = -1;
+
+                            grade.id = "None_"+grade.name;
+                            grade.showId = false;
                             grade.type = "GRADE";
 
                             currentCourse.grades.add(grade);
@@ -334,18 +341,22 @@ class DemoArenaUtils {
                             currentCourse = new Course();
                             currentCourse.id = el.child(1).text();
                             currentCourse.name = el.child(2).text();
-                            currentCourse.grade = Double.parseDouble(el.child(4).text());
+                            try { currentCourse.grade = Double.parseDouble(el.child(4).text());  }
+                            catch (Exception e) { currentCourse.grade = -1; }
                             currentCourse.coeff = Double.parseDouble(el.child(6).text());
 
                             Pattern pattern = Pattern.compile("(\\d+.\\d+)/(\\d+.\\d+)");
                             Matcher matcher = pattern.matcher(el.html());
                             if (matcher.find()) {
-                                currentCourse.min_grade = Double.parseDouble(matcher.group(1));
-                                currentCourse.max_grade = Double.parseDouble(matcher.group(2));
+                                try {
+                                    currentCourse.min_grade = Double.parseDouble(matcher.group(1));
+                                    currentCourse.max_grade = Double.parseDouble(matcher.group(2));
+                                } catch (Exception e) {
+                                    currentCourse.min_grade = -1;
+                                    currentCourse.max_grade = -1;
+                                }
                             }
-
                             currentUE.courses.add(currentCourse);
-
                         }
                     }
                 }

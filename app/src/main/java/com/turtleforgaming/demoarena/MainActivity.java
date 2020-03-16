@@ -305,6 +305,22 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void setupTabs(boolean showAbsences) {
+        final TabLayout tabLayout = findViewById(R.id.TabLayout);
+        tabLayout.removeAllTabs();
+
+        TabLayout.Tab tabGrades = tabLayout.newTab();
+        tabGrades.setText(getString(R.string.viewer_grades));
+
+        TabLayout.Tab tabAbs = tabLayout.newTab();
+        tabAbs.setText(getString(R.string.viewer_absences));
+
+        tabLayout.addTab(tabGrades);
+        if(showAbsences) {
+            tabLayout.addTab(tabAbs);
+        }
+
+    }
     private void setupViewer() {
         setContentView(R.layout.layout_demoarena);
         final TabLayout tabLayout = findViewById(R.id.TabLayout);
@@ -340,14 +356,19 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 DemoArenaUtils.User user = demoArenaUtils.parseCurrentPage();
-                                if(tabLayout.getSelectedTabPosition() == 0) {
+                                if(user.semesters.get(0).done) {
+                                    setupTabs(false);
+                                } else {
+                                    setupTabs(true);
+                                }
+                                if(tabLayout.getSelectedTabPosition() == 0 || user.semesters.get(0).done) {
                                     if(user.semesters.get(0).ues.size() >0) {
                                         vf.setDisplayedChild(0);
                                     } else {
                                         vf.setDisplayedChild(3);
                                     }
                                 }
-                                if(tabLayout.getSelectedTabPosition() == 1) {
+                                if(tabLayout.getSelectedTabPosition() == 1 && !user.semesters.get(0).done) {
                                     if(user.semesters.get(0).absences.size() >0) {
                                         vf.setDisplayedChild(1);
                                     } else {

@@ -94,7 +94,8 @@ public class GradeAdapter extends ArrayAdapter<DemoArenaUtils.Grade> {
         viewHolder.TVgradeID.setText(grade.id);
         viewHolder.TVgradeName.setText(grade.name);
 
-        String gradeText = String.valueOf(grade.grade);
+        String gradeText = "" ;
+        if(grade.grade >=0) { gradeText +=String.valueOf(grade.grade); }
         if(grade.outof >0) { gradeText +="/" + grade.outof; }
         viewHolder.TVgrade.setText(gradeText);
 
