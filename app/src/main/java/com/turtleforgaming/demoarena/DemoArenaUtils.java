@@ -3,6 +3,7 @@ package com.turtleforgaming.demoarena;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
+import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -246,52 +247,106 @@ class DemoArenaUtils {
             int i=0;
             for(Element el : gradesTable.getElementsByTag("tr")) {
                 if(i>0 && !user.semesters.get(0).done || i>1 && user.semesters.get(0).done ) {
-                    if (el.hasClass("notes_bulletin_row_ue")) {
+                    if(user.semesters.get(0).done) {
+                        if (el.hasClass("notes_bulletin_row_ue")) {
 
-                        currentUE = new UE();
+                            currentUE = new UE();
 
-                        Pattern pattern = Pattern.compile("</span>(.*)<br>(.*)</td>");
-                        Matcher matcher = pattern.matcher(el.html());
-                        if (matcher.find()) {
-                            currentUE.id = matcher.group(1);
-                            currentUE.name = matcher.group(2);
+                            Pattern pattern = Pattern.compile("</span>(.*)<br>(.*)</td>");
+                            Matcher matcher = pattern.matcher(el.html());
+                            if (matcher.find()) {
+                                currentUE.id = matcher.group(1);
+                                currentUE.name = matcher.group(2);
+                            } else {
+                                currentUE.name = el.text();
+                            }
+                            currentUE.grade = Double.parseDouble(el.child(2).text());
+                            currentUE.coeff = Double.parseDouble(el.child(4).text());
+
+                            Pattern pattern2 = Pattern.compile("(\\d+.\\d+)/(\\d+.\\d+)");
+                            Matcher matcher2 = pattern2.matcher(el.html());
+                            if (matcher2.find()) {
+                                currentUE.min_grade = Double.parseDouble(matcher2.group(1));
+                                currentUE.max_grade = Double.parseDouble(matcher2.group(2));
+                            }
+
+                            user.semesters.get(0).ues.add(currentUE);
+
+
                         } else {
-                            currentUE.name = el.text();
+                            currentCourse = new Course();
+                            currentCourse.id = el.child(1).text();
+                            currentCourse.name = el.child(2).text();
+                            currentCourse.grade = Double.parseDouble(el.child(4).text());
+                            currentCourse.coeff = Double.parseDouble(el.child(6).text());
+
+                            Pattern pattern = Pattern.compile("(\\d+.\\d+)/(\\d+.\\d+)");
+                            Matcher matcher = pattern.matcher(el.html());
+                            if (matcher.find()) {
+                                currentCourse.min_grade = Double.parseDouble(matcher.group(1));
+                                currentCourse.max_grade = Double.parseDouble(matcher.group(2));
+                            }
+
+                            currentUE.courses.add(currentCourse);
+
                         }
-                        currentUE.grade = Double.parseDouble(el.child(2).text());
-                        currentUE.coeff = Double.parseDouble(el.child(4).text());
+                    } else {
+                        if (el.hasClass("notes_bulletin_row_ue")) {
 
-                        Pattern pattern2 = Pattern.compile("(\\d+.\\d+)/(\\d+.\\d+)");
-                        Matcher matcher2 = pattern2.matcher(el.html());
-                        if (matcher2.find()) {
-                            currentUE.min_grade = Double.parseDouble(matcher2.group(1));
-                            currentUE.max_grade = Double.parseDouble(matcher2.group(2));
+                            currentUE = new UE();
+
+                            Pattern pattern = Pattern.compile("</span>(.*)<br>(.*)</td>");
+                            Matcher matcher = pattern.matcher(el.html());
+                            if (matcher.find()) {
+                                currentUE.id = matcher.group(1);
+                                currentUE.name = matcher.group(2);
+                            } else {
+                                currentUE.name = el.text();
+                            }
+                            currentUE.grade = Double.parseDouble(el.child(2).text());
+                            currentUE.coeff = Double.parseDouble(el.child(4).text());
+
+                            Pattern pattern2 = Pattern.compile("(\\d+.\\d+)/(\\d+.\\d+)");
+                            Matcher matcher2 = pattern2.matcher(el.html());
+                            if (matcher2.find()) {
+                                currentUE.min_grade = Double.parseDouble(matcher2.group(1));
+                                currentUE.max_grade = Double.parseDouble(matcher2.group(2));
+                            }
+
+                            user.semesters.get(0).ues.add(currentUE);
+
+
+                        } else if(el.hasClass("toggle4")) {
+                            Grade grade = new Grade();
+                            grade.coeff = 0;
+                            grade.grade = 0;
+                            grade.id = "UNKNOWN";
+                            grade.max_grade = 0;
+                            grade.min_grade = 0;
+                            grade.name = "UNKNOWN";
+                            grade.outof = 0;
+                            grade.showId = true;
+                            grade.type = "GRADE";
+
+                            currentCourse.grades.add(grade);
+
+                        } else {
+                            currentCourse = new Course();
+                            currentCourse.id = el.child(1).text();
+                            currentCourse.name = el.child(2).text();
+                            currentCourse.grade = Double.parseDouble(el.child(4).text());
+                            currentCourse.coeff = Double.parseDouble(el.child(6).text());
+
+                            Pattern pattern = Pattern.compile("(\\d+.\\d+)/(\\d+.\\d+)");
+                            Matcher matcher = pattern.matcher(el.html());
+                            if (matcher.find()) {
+                                currentCourse.min_grade = Double.parseDouble(matcher.group(1));
+                                currentCourse.max_grade = Double.parseDouble(matcher.group(2));
+                            }
+
+                            currentUE.courses.add(currentCourse);
+
                         }
-
-                        user.semesters.get(0).ues.add(currentUE);
-
-
-                    } else if (el.hasClass("toggle4") || user.semesters.get(0).done) {
-                        currentCourse = new Course();
-                        currentCourse.id = el.child(1).text();
-                        currentCourse.name = el.child(2).text();
-                        currentCourse.grade = Double.parseDouble(el.child(4).text());
-                        currentCourse.coeff = Double.parseDouble(el.child(6).text());
-
-                        Pattern pattern = Pattern.compile("(\\d+.\\d+)/(\\d+.\\d+)");
-                        Matcher matcher = pattern.matcher(el.html());
-                        if (matcher.find()) {
-                            currentCourse.min_grade = Double.parseDouble(matcher.group(1));
-                            currentCourse.max_grade = Double.parseDouble(matcher.group(2));
-                        }
-
-                        currentUE.courses.add(currentCourse);
-
-                    } else if (!user.semesters.get(0).done) {
-                        Grade grade = new Grade();
-
-
-                        currentCourse.grades.add(grade);
                     }
                 }
                 i++;
