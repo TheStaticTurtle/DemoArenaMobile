@@ -9,7 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a242a258-6b2f-4a82-b06c-1107d1b96bdf" name="Default Changelist" comment="Patched grade coeff (Was modifing the UE coeff)">
+    <list default="true" id="a242a258-6b2f-4a82-b06c-1107d1b96bdf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -19,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,19 +66,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -85,79 +78,39 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="194" column="65" lean-forward="true" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
+            <state relative-caret-position="323">
+              <caret line="79" column="44" lean-forward="true" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2122#2317#0" expanded="true" />
                 <element signature="e#2316#2317#0" expanded="true" />
-                <element signature="e#4121#4152#0" expanded="true" />
-                <element signature="e#4186#4225#0" expanded="true" />
-                <element signature="e#4271#4442#0" expanded="true" />
-                <element signature="e#4441#4442#0" expanded="true" />
-                <element signature="e#4464#4706#0" expanded="true" />
-                <element signature="e#4705#4706#0" expanded="true" />
+                <element signature="e#4352#4383#0" expanded="true" />
+                <element signature="e#4417#4456#0" expanded="true" />
+                <element signature="e#4502#4673#0" expanded="true" />
+                <element signature="e#4672#4673#0" expanded="true" />
+                <element signature="e#4717#4959#0" expanded="true" />
+                <element signature="e#4958#4959#0" expanded="true" />
                 <element signature="method#openlink#0;class#MainActivity#0" />
                 <element signature="method#checkUpdate#0;class#MainActivity#0" />
-                <element signature="e#7188#9600#0" expanded="true" />
-                <element signature="e#7761#8503#0" expanded="true" />
-                <element signature="e#8502#8503#0" expanded="true" />
-                <element signature="e#8703#8739#0" expanded="true" />
-                <element signature="e#8785#8822#0" expanded="true" />
-                <element signature="e#8854#8894#0" expanded="true" />
-                <element signature="e#9114#9320#0" expanded="true" />
-                <element signature="e#9319#9320#0" expanded="true" />
-                <element signature="e#9599#9600#0" expanded="true" />
+                <element signature="e#7748#10177#0" expanded="true" />
+                <element signature="e#8332#9089#0" expanded="true" />
+                <element signature="e#9088#9089#0" expanded="true" />
+                <element signature="e#9280#9316#0" expanded="true" />
+                <element signature="e#9362#9399#0" expanded="true" />
+                <element signature="e#9431#9471#0" expanded="true" />
+                <element signature="e#9691#9897#0" expanded="true" />
+                <element signature="e#9896#9897#0" expanded="true" />
+                <element signature="e#10176#10177#0" expanded="true" />
                 <element signature="method#isInternetAvailable#0;class#MainActivity#0" />
-                <element signature="e#10319#10608#0" expanded="true" />
-                <element signature="e#10460#10519#0" expanded="true" />
-                <element signature="e#10607#10608#0" expanded="true" />
-                <element signature="e#10753#11321#0" expanded="true" />
-                <element signature="e#11013#11091#0" expanded="true" />
-                <element signature="e#11217#11249#0" expanded="true" />
-                <element signature="e#11320#11321#0" expanded="true" />
-                <element signature="e#15819#15852#0" expanded="true" />
-                <element signature="e#15930#15965#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
-              <caret line="327" column="86" selection-start-line="327" selection-start-column="86" selection-end-line="327" selection-end-column="86" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3416#3440#1" expanded="true" />
-                <element signature="e#4747#4771#1" expanded="true" />
-                <element signature="e#5517#5541#1" expanded="true" />
-                <element signature="e#9191#9215#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/GradeAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/SshManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-377">
-              <caret line="66" column="96" selection-start-line="66" selection-start-column="96" selection-end-line="66" selection-end-column="96" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#10895#11183#0" expanded="true" />
+                <element signature="e#11035#11094#0" expanded="true" />
+                <element signature="e#11182#11183#0" expanded="true" />
+                <element signature="e#11328#11896#0" expanded="true" />
+                <element signature="e#11588#11666#0" expanded="true" />
+                <element signature="e#11792#11824#0" expanded="true" />
+                <element signature="e#11895#11896#0" expanded="true" />
+                <element signature="e#16394#16427#0" expanded="true" />
+                <element signature="e#16505#16540#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="714">
+              <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -249,13 +202,13 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_demoarena_suchemptyness.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/semester_adapter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/grade_adapter.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/SshManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/GradeAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java" />
       </list>
     </option>
@@ -301,6 +254,12 @@
               <item name="DemoArena" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="DemoArena" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="DemoArena" type="1abcf292:AndroidViewProjectNode" />
@@ -482,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584382139759</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added new version notifiation for users">
+      <created>1584384423482</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584384423482</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -499,7 +465,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22867803" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22867803" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -514,7 +480,7 @@
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49946582" weight="0.32779622" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5005342" side_tool="true" weight="0.32779622" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49893162" visible="true" weight="0.08775731" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49893162" visible="true" weight="0.08775731" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3296582" />
       <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32890365" />
@@ -564,7 +530,8 @@
     <MESSAGE value="Added user-comprenhsible errors&#10;Mofidifed app action with user interactions (Disabling / Enabling buttons at the right time)&#10;SshSession now connect when user press the button not at app startup&#10;Limited input filed for the correct values (INE + Captcha)&#10;Changed application theme&#10;Put all hardcoded text into strings.xml" />
     <MESSAGE value="Finnaly patched individuals grades&#10;Completed semesters no longer displays abcences (Since the server doesn't return it)" />
     <MESSAGE value="Patched grade coeff (Was modifing the UE coeff)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Patched grade coeff (Was modifing the UE coeff)" />
+    <MESSAGE value="Added new version notifiation for users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new version notifiation for users" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/ConnectionInfo.java" />
@@ -703,14 +670,6 @@
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -718,12 +677,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/SshManager.java">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="66" column="96" selection-start-line="66" selection-start-column="96" selection-end-line="66" selection-end-column="96" />
+        <state relative-caret-position="697">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/grade_adapter.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4820">
+          <caret line="327" column="86" selection-start-line="327" selection-start-column="86" selection-end-line="327" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3416#3440#1" expanded="true" />
+            <element signature="e#4747#4771#1" expanded="true" />
+            <element signature="e#5517#5541#1" expanded="true" />
+            <element signature="e#9191#9215#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -738,84 +730,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/SshManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/DemoArenaUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="327" column="86" selection-start-line="327" selection-start-column="86" selection-end-line="327" selection-end-column="86" />
+        <state relative-caret-position="-377">
+          <caret line="66" column="96" selection-start-line="66" selection-start-column="96" selection-end-line="66" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3416#3440#1" expanded="true" />
-            <element signature="e#4747#4771#1" expanded="true" />
-            <element signature="e#5517#5541#1" expanded="true" />
-            <element signature="e#9191#9215#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/grade_adapter.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/turtleforgaming/demoarena/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="194" column="65" lean-forward="true" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
+        <state relative-caret-position="323">
+          <caret line="79" column="44" lean-forward="true" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2122#2317#0" expanded="true" />
             <element signature="e#2316#2317#0" expanded="true" />
-            <element signature="e#4121#4152#0" expanded="true" />
-            <element signature="e#4186#4225#0" expanded="true" />
-            <element signature="e#4271#4442#0" expanded="true" />
-            <element signature="e#4441#4442#0" expanded="true" />
-            <element signature="e#4464#4706#0" expanded="true" />
-            <element signature="e#4705#4706#0" expanded="true" />
+            <element signature="e#4352#4383#0" expanded="true" />
+            <element signature="e#4417#4456#0" expanded="true" />
+            <element signature="e#4502#4673#0" expanded="true" />
+            <element signature="e#4672#4673#0" expanded="true" />
+            <element signature="e#4717#4959#0" expanded="true" />
+            <element signature="e#4958#4959#0" expanded="true" />
             <element signature="method#openlink#0;class#MainActivity#0" />
             <element signature="method#checkUpdate#0;class#MainActivity#0" />
-            <element signature="e#7188#9600#0" expanded="true" />
-            <element signature="e#7761#8503#0" expanded="true" />
-            <element signature="e#8502#8503#0" expanded="true" />
-            <element signature="e#8703#8739#0" expanded="true" />
-            <element signature="e#8785#8822#0" expanded="true" />
-            <element signature="e#8854#8894#0" expanded="true" />
-            <element signature="e#9114#9320#0" expanded="true" />
-            <element signature="e#9319#9320#0" expanded="true" />
-            <element signature="e#9599#9600#0" expanded="true" />
+            <element signature="e#7748#10177#0" expanded="true" />
+            <element signature="e#8332#9089#0" expanded="true" />
+            <element signature="e#9088#9089#0" expanded="true" />
+            <element signature="e#9280#9316#0" expanded="true" />
+            <element signature="e#9362#9399#0" expanded="true" />
+            <element signature="e#9431#9471#0" expanded="true" />
+            <element signature="e#9691#9897#0" expanded="true" />
+            <element signature="e#9896#9897#0" expanded="true" />
+            <element signature="e#10176#10177#0" expanded="true" />
             <element signature="method#isInternetAvailable#0;class#MainActivity#0" />
-            <element signature="e#10319#10608#0" expanded="true" />
-            <element signature="e#10460#10519#0" expanded="true" />
-            <element signature="e#10607#10608#0" expanded="true" />
-            <element signature="e#10753#11321#0" expanded="true" />
-            <element signature="e#11013#11091#0" expanded="true" />
-            <element signature="e#11217#11249#0" expanded="true" />
-            <element signature="e#11320#11321#0" expanded="true" />
-            <element signature="e#15819#15852#0" expanded="true" />
-            <element signature="e#15930#15965#0" expanded="true" />
+            <element signature="e#10895#11183#0" expanded="true" />
+            <element signature="e#11035#11094#0" expanded="true" />
+            <element signature="e#11182#11183#0" expanded="true" />
+            <element signature="e#11328#11896#0" expanded="true" />
+            <element signature="e#11588#11666#0" expanded="true" />
+            <element signature="e#11792#11824#0" expanded="true" />
+            <element signature="e#11895#11896#0" expanded="true" />
+            <element signature="e#16394#16427#0" expanded="true" />
+            <element signature="e#16505#16540#0" expanded="true" />
           </folding>
         </state>
       </provider>

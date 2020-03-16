@@ -97,6 +97,14 @@ public class MainActivity extends AppCompatActivity {
         });
         buttonCaptcha = findViewById(R.id.buttonValidateCacha);
 
+        buttonConnect = findViewById(R.id.buttonReportBug);
+        buttonConnect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openlink("https://github.com/TurtleForGaming/DemoArenaMobile/issues/new/choose");
+            }
+        });
+
         InputFilter enterFilter = new InputFilter() {
             public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
                 for (int i = start;i < end;i++) {

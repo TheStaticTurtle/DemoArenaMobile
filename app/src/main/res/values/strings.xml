@@ -39,4 +39,6 @@
     <string name="action_newversion">Nouvelle version</string>
     <string name="action_actualversion">Version actuelle</string>
     <string name="action_newupdate">Mise à jour disponible</string>
+
+    <string name="report_bug">Report un bug</string>
 </resources>

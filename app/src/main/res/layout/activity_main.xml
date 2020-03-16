@@ -188,4 +188,12 @@
             android:text="@string/login_savepwd" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/buttonReportBug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/report_bug"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
