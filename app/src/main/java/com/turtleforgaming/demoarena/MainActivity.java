@@ -97,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
         });
         buttonCaptcha = findViewById(R.id.buttonValidateCacha);
 
-        buttonConnect = findViewById(R.id.buttonReportBug);
-        buttonConnect.setOnClickListener(new View.OnClickListener() {
+        Button buttonBug = findViewById(R.id.buttonReportBug);
+        buttonBug.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openlink("https://github.com/TurtleForGaming/DemoArenaMobile/issues/new/choose");
