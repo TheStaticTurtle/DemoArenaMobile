@@ -1,3 +1,7 @@
+# Do not use this app IT DOES NOT WORK
+## Instead use the flutter version [https://github.com/TheStaticTurtle/DemoArenaMobile-Flutter](https://github.com/TheStaticTurtle/DemoArenaMobile-Flutter)
+Reason for moving is to enable compatibility with IOS. It's also whyt this repo is archived
+
 # DemoArenaMobile
 This a application for studuents of the IUT of Belfort Monbeliard to see their grades without creating a reverse proxy to the university server.
 
